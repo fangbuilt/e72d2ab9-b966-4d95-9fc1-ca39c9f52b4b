@@ -5,6 +5,7 @@ import { PositionModule } from './position/position.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { EmployeeModule } from './employee/employee.module';
+import { SeedModule } from './seed.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { EmployeeModule } from './employee/employee.module';
     MongooseModule.forRoot(process.env.DB_URI),
     PositionModule,
     EmployeeModule,
+    SeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
