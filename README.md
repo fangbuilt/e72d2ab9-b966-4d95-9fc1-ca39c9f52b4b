@@ -58,6 +58,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Seed (A message from Bintang)
+
+After setting up your MongoDB connection string in your ```.env``` file, whether local or with Atlas, you can generate the data by running these endpoints on Swagger (```http://localhost:3000/api```), Postman, or others:
+
+- Method: ```POST```
+- ```http://localhost:<port>/positionSeed```
+- ```http://localhost:<port>/employeeSeed```
+
+Important! ```positionSeed``` must be run first and this is crucial because ```employeeSeed``` will be needing a reference field from ```positionSeed```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
